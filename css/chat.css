@@ -1,0 +1,77 @@
+.body-container {
+    display: flex;
+}
+
+.chat-history {
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(40vh - 30px); /*Set a fixed height for the sidebar*/
+  }
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-content {
+    padding: 50px;
+    overflow-y: auto; /* Allow vertical scrolling in the main content only */
+    height: calc(100vh - 30px); /*Set a fixed height for the main content*/
+}
+
+.chat-input {
+    position: fixed;
+    width: 50%;
+    margin: 10px auto;
+    bottom: 20px;
+    margin: 0 30px;
+    height: 50px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    width: 100%;
+    word-wrap: break-word;
+    /* overflow: hidden; */
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.message.sent {
+    background-color: rgb(246, 213, 181);
+}
+
+.message.received {
+    background-color: #f8f9fa; /* Light gray for response messages */
+}
+
+
+
+/* Style the user and robot icons */
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-right: 8px;
+}
+
+/* Adding styles for code highlighting */
+pre {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: pre-wrap; /* Preserve line breaks and wrap text */
+}
+
+pre code {
+    margin: 15px 0;
+    font-family: 'Roboto Mono', monospace !important; /* The !important flag can help override the existing styles */
+}
